@@ -23,9 +23,7 @@
     "web3": "^0.20.6"
   },
   "devDependencies": {
-    "babel-eslint": "^8.2.3",
     "babel-preset-stage-2": "^6.24.1",
-    "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.9.1",
@@ -51,5 +49,11 @@
     "test_contracts": "npm-run-all -p -r ganache_quiet truffle_test 2>/dev/null",
     "test": "CI=true npm run test_components && CI=true npm run test_contracts",
     "eject": "react-scripts eject"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

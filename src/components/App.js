@@ -17,8 +17,8 @@ type State = {
   poll: any,
 };
 
-class App extends React.Component<Props, State> {
-  constructor(props: { network: string }) {
+class App extends React.Component {
+  constructor(props) {
     super(props);
     this.state = {
       votePending: false,
@@ -27,7 +27,7 @@ class App extends React.Component<Props, State> {
     };
   }
 
-  async componentDidMount(): any {
+  async componentDidMount() {
     const { contracts } = await fetchContracts(this.props.network, ['Voting']);
     const poll = new Voting(contracts.Voting);
     await poll.initCandidateList();
@@ -38,7 +38,7 @@ class App extends React.Component<Props, State> {
     });
   }
 
-  voteHandler = (name: string) => async () => {
+  voteHandler = name => async () => {
     this.setState({ votePending: true });
     const votes = await this.state.poll.voteForCandidate(name);
     this.setState({ votes, votePending: false });

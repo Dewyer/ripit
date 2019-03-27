@@ -1,0 +1,168 @@
+{
+  "development": {
+    "networkName": "development",
+    "networkLocation": {
+      "host": "127.0.0.1",
+      "port": 8545,
+      "network_id": "1553711429903"
+    },
+    "contractName": "Voting",
+    "abi": [
+      {
+        "constant": false,
+        "inputs": [],
+        "name": "kill",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function",
+        "signature": "0x41c0e1b5"
+      },
+      {
+        "constant": true,
+        "inputs": [
+          {
+            "name": "",
+            "type": "bytes32"
+          }
+        ],
+        "name": "votesReceived",
+        "outputs": [
+          {
+            "name": "",
+            "type": "uint8"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function",
+        "signature": "0x7021939f"
+      },
+      {
+        "constant": true,
+        "inputs": [
+          {
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "name": "candidateList",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bytes32"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function",
+        "signature": "0xb13c744b"
+      },
+      {
+        "inputs": [
+          {
+            "name": "candidateNames",
+            "type": "bytes32[]"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "constructor",
+        "signature": "constructor"
+      },
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "getCandidateList",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bytes32[]"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function",
+        "signature": "0xfdbc4006"
+      },
+      {
+        "constant": true,
+        "inputs": [],
+        "name": "getCandidateListLength",
+        "outputs": [
+          {
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function",
+        "signature": "0x72d2d965"
+      },
+      {
+        "constant": true,
+        "inputs": [
+          {
+            "name": "candidate",
+            "type": "bytes32"
+          }
+        ],
+        "name": "totalVotesFor",
+        "outputs": [
+          {
+            "name": "",
+            "type": "uint8"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function",
+        "signature": "0x2f265cf7"
+      },
+      {
+        "constant": false,
+        "inputs": [
+          {
+            "name": "candidate",
+            "type": "bytes32"
+          }
+        ],
+        "name": "voteForCandidate",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function",
+        "signature": "0xcc9ab267"
+      },
+      {
+        "constant": true,
+        "inputs": [
+          {
+            "name": "candidate",
+            "type": "bytes32"
+          }
+        ],
+        "name": "validCandidate",
+        "outputs": [
+          {
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function",
+        "signature": "0x392e6678"
+      }
+    ],
+    "compiler": {
+      "name": "solc",
+      "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+    },
+    "schemaVersion": "3.0.5",
+    "updatedAt": "2019-03-27T18:51:11.474Z",
+    "address": "0x0742938161Be040D427073DB5157Cff72A3816C8",
+    "network_id": "1553711429903"
+  }
+}

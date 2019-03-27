@@ -1,4 +1,4 @@
-pragma solidity ^0.4.17;
+pragma solidity >=0.4.22 <0.6.0;
 
 import "../lib/mortal.sol";
 
@@ -10,7 +10,7 @@ contract Migrations is mortal {
     if (msg.sender == owner) _;
   }
 
-  function Migrations() public {
+  constructor() public {
     owner = msg.sender;
   }
 

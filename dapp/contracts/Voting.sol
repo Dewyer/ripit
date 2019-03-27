@@ -1,4 +1,4 @@
-pragma solidity ^0.4.11;
+pragma solidity >=0.4.22 <0.6.0;
 // We have to specify what version of compiler this code will compile with
 
 import "../lib/mortal.sol";
@@ -8,11 +8,11 @@ contract Voting is mortal {
 
   bytes32[] public candidateList;
 
-  function Voting(bytes32[] candidateNames) public {
+  constructor(bytes32[] memory candidateNames) public {
     candidateList = candidateNames;
   }
 
-  function getCandidateList() public view returns (bytes32[]) {
+  function getCandidateList() public view returns (bytes32[] memory) {
     return candidateList;
   }
 
