@@ -1,13 +1,22 @@
 import React, { Component } from "react";
-import SimpleStorageContract from "./contracts/SimpleStorage.json";
+import RipitContract from "./contracts/Ripit.json";
 import getWeb3 from "./utils/getWeb3";
 
 import "./App.css";
 
 class App extends Component {
-	state = { storageValue: 0, web3: null, accounts: null, contract: null };
+	state = {
+		storageValue: 0, 
+		web3: null, 
+		accounts: null, 
+		contract: null, 
+		latestIndex: 0 
+	};
 
 	componentDidMount = async () => {
+		this.newPostEvent = this.newPostEvent.bind(this);
+		this.getPostByIndex = this.getPostByIndex.bind(this);
+
 		try {
 			// Get network provider and web3 instance.
 			const web3 = await getWeb3();
@@ -17,15 +26,25 @@ class App extends Component {
 
 			// Get the contract instance.
 			const networkId = await web3.eth.net.getId();
-			const deployedNetwork = SimpleStorageContract.networks[networkId];
+			const deployedNetwork = RipitContract.networks[networkId];
 			const instance = new web3.eth.Contract(
-				SimpleStorageContract.abi,
+				RipitContract.abi,
 				deployedNetwork && deployedNetwork.address,
 			);
 
 			// Set web3, accounts, and contract to the state, and then proceed with an
 			// example of interacting with the contract's methods.
-			this.setState({ web3, accounts, contract: instance }, this.runExample);
+
+			instance.events.NewPost().watch((index) => { this.newPostEvent(index) })
+			let latest = await instance.methods.getLatestIndex().call({ from: accounts[0] });
+
+			for(let ii = 0; ii < latest;ii++)
+			{
+				let post = await this.getPostByIndex(ii);
+			}
+
+			this.setState({ web3, accounts, contract: instance,latestIndex:latest }, this.runExample);
+
 		} catch (error) {
 			// Catch any errors for any of the above operations.
 			alert(
@@ -34,6 +53,18 @@ class App extends Component {
 			console.error(error);
 		}
 	};
+
+	async getPostByIndex(index)
+	{
+		let post = await this.state.contract.methods.getPost(index).call({ from: this.state.accounts[0] });
+		console.log(JSON.stringify(post));
+		return post;
+
+	}
+
+	async newPostEvent(index) {
+		console.log("new post: " + index);
+	}
 
 	runExample = async () => {
 		const { accounts, contract } = this.state;

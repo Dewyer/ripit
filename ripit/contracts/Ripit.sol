@@ -13,9 +13,16 @@ contract Ripit {
     uint lastPostIndex;
     mapping(uint=>Post) posts;
 
+    event NewPost(uint index);
+
     constructor() public
     {
         lastPostIndex= 0;
+    }
+
+    function getLatestIndex()public view returns(uint)
+    {
+        return lastPostIndex;
     }
 
     function post(string memory username,string memory body,uint timeStamp) public
@@ -24,12 +31,14 @@ contract Ripit {
         require(bytes(body).length <= 1500);
         require(timeStamp >= 0);
         
-        posts[lastPostIndex+1] = Post(username,msg.sender,body,timeStamp);
+        posts[lastPostIndex] = Post(username,msg.sender,body,timeStamp);
+        lastPostIndex += 1;
     }
     
-    function getPost() public view returns (Post memory)
+    function getPost(uint index) public view returns (string memory username,string memory body, uint timeStamp)
     {
-        
+        Post memory pp = posts[index];
+        return (pp.actualUsername,pp.body,pp.timeStamp);
         
     }
 }
