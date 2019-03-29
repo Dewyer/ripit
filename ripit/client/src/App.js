@@ -104,7 +104,7 @@ export default class App extends Component {
 			}
 			let allP = this.state.posts.concat(latestPosts);
 			this.setState({posts:allP});
-		},1400);
+		},1);
 	}
 
 	onChangeUsername(txt)
@@ -125,7 +125,7 @@ export default class App extends Component {
 		}
 		return (
 			<Container>
-				<h1>RIPPIT</h1>
+				<HeadCont><Icon src="/ic.png"/><h1>RIPPIT</h1></HeadCont>
 				<UsernameBox onChangeUsername={this.onChangeUsername}/>
 				<PostContainer posts={this.state.posts}/>
 				<Poster onPost={this.doPost}/>
@@ -144,3 +144,17 @@ const Container = styled.div`
 	width:100vw;
 	height:100vh;
 `
+const HeadCont = styled.div`
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	text-align:center;
+	flex-direction:row;
+`
+const Icon = styled.img`
+	width:40px;
+	height:40px;
+	margin-right:15px;
+`
+
+

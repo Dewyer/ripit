@@ -51,12 +51,13 @@ const Button = styled.a`
     margin-top:15px;
     height:30px;
     width:100px;
-    background-color:gray;
+    background-color:#89DA59;
     cursor: pointer;
     border-radius:15px;
+    margin-bottom:15px;
 
     &:hover
     {
-        background-color:lightgray;
+        background-color:#a0ff68;
     }
 `
