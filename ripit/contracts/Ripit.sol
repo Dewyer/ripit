@@ -32,6 +32,7 @@ contract Ripit {
         require(timeStamp >= 0);
         
         posts[lastPostIndex] = Post(username,msg.sender,body,timeStamp);
+        emit NewPost(lastPostIndex);
         lastPostIndex += 1;
     }
     
