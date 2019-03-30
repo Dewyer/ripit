@@ -125,7 +125,7 @@ export default class App extends Component {
 		}
 		return (
 			<Container>
-				<HeadCont><Icon src="/ic.png"/><h1>RIPPIT</h1></HeadCont>
+				<HeadCont><Icon src="ic.png"/><h1>RIPPIT</h1></HeadCont>
 				<UsernameBox onChangeUsername={this.onChangeUsername}/>
 				<PostContainer posts={this.state.posts}/>
 				<Poster onPost={this.doPost}/>
