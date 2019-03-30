@@ -1,13 +1,13 @@
 {
   "main.css": "/ripit/static/css/main.c508d55f.chunk.css",
-  "main.js": "/ripit/static/js/main.b67a2640.chunk.js",
-  "main.js.map": "/ripit/static/js/main.b67a2640.chunk.js.map",
+  "main.js": "/ripit/static/js/main.23ad39eb.chunk.js",
+  "main.js.map": "/ripit/static/js/main.23ad39eb.chunk.js.map",
   "static/js/1.9e48ba23.chunk.js": "/ripit/static/js/1.9e48ba23.chunk.js",
   "static/js/1.9e48ba23.chunk.js.map": "/ripit/static/js/1.9e48ba23.chunk.js.map",
   "runtime~main.js": "/ripit/static/js/runtime~main.1b08b4db.js",
   "runtime~main.js.map": "/ripit/static/js/runtime~main.1b08b4db.js.map",
   "static/css/main.c508d55f.chunk.css.map": "/ripit/static/css/main.c508d55f.chunk.css.map",
   "index.html": "/ripit/index.html",
-  "precache-manifest.c4062778b7d949ba3a0c4f8e4d8fb9f0.js": "/ripit/precache-manifest.c4062778b7d949ba3a0c4f8e4d8fb9f0.js",
+  "precache-manifest.627d7668f1267b00343cf96d35c7c92f.js": "/ripit/precache-manifest.627d7668f1267b00343cf96d35c7c92f.js",
   "service-worker.js": "/ripit/service-worker.js"
 }
