@@ -103,7 +103,7 @@ export default class App extends Component {
 				latestPosts.push(post);
 			}
 			let allP = this.state.posts.concat(latestPosts);
-			this.setState({posts:allP});
+			this.setState({posts:allP,latestIndex:latest});
 		},1);
 	}
 

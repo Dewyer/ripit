@@ -7,7 +7,16 @@ export default class PostContainer extends Component {
 	constructor(props) {
         super(props);
         this.getComponentForPost = this.getComponentForPost.bind(this);
+        this.scrollToBottom = this.scrollToBottom.bind(this);
 	}
+
+    componentDidMount() {
+        this.scrollToBottom();
+    }
+    
+    componentDidUpdate() {
+        this.scrollToBottom();
+    }
 
     getComponentForPost(post)
     {
@@ -26,12 +35,17 @@ export default class PostContainer extends Component {
         );
     }
 
+    scrollToBottom() {
+        console.log("sc "+this.list.scrollIntoView)
+        //this.list.scrollIntoView({ behavior: 'smooth' });
+    }
+
 	render() {
         const listOfPosts = this.props.posts.map(this.getComponentForPost);
 
 		return (
 			<Container>
-                <Lister>
+                <Lister ref={el=>this.list = el}>
                     {listOfPosts}
                 </Lister>
 			</Container>
@@ -46,7 +60,6 @@ const Container = styled.div`
 	text-align:center;
 	flex-direction:column;
 	width:620px;
-    height:45%;
     margin-top:15px;
     margin-bottom:15px;
 `
