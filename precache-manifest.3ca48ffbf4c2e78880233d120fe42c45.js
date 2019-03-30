@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/ripit/static/js/runtime~main.1b08b4db.js"
   },
   {
-    "revision": "23ad39ebedfc353688f2",
-    "url": "/ripit/static/js/main.23ad39eb.chunk.js"
+    "revision": "59910af64dcc089355d4",
+    "url": "/ripit/static/js/main.59910af6.chunk.js"
   },
   {
     "revision": "9e48ba234e068b3e883c",
     "url": "/ripit/static/js/1.9e48ba23.chunk.js"
   },
   {
-    "revision": "23ad39ebedfc353688f2",
+    "revision": "59910af64dcc089355d4",
     "url": "/ripit/static/css/main.c508d55f.chunk.css"
   },
   {
-    "revision": "708a6a4786fbde031f61e1d4ef50582a",
+    "revision": "b51cfb51e3e1958eee7a1147f15dc598",
     "url": "/ripit/index.html"
   }
 ];
