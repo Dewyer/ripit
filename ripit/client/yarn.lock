@@ -10869,7 +10869,7 @@ web3-utils@1.0.0-beta.51:
     randomhex "0.1.5"
     utf8 "2.1.1"
 
-web3@^1.0.0-beta.37:
+web3@^1.0.0-beta.51:
   version "1.0.0-beta.51"
   resolved "https://registry.yarnpkg.com/web3/-/web3-1.0.0-beta.51.tgz#1099df908ef3421704e0aa0c3ec680d3bd2cf01b"
   integrity sha512-cSjJe8AwR9TKELLkGwk2HNL+37e+Y3x0nKkdBNpBZQNZR0SeoT3Jckkd7pBgrJKcyupItN+tKF48x5yNRvHzrQ==
